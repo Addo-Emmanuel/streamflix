@@ -1,6 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router'
 import Hero from '../components/Hero'
 import TrendingNow from '@/components/TrendingNow'
+import Popular from '@/components/Popular'
+import TopRated from '@/components/TopRated'
+import UpComing from '@/components/UpComing'
 
 export const Route = createFileRoute('/')({
   component: RouteComponent,
@@ -12,7 +15,9 @@ function RouteComponent() {
       <Hero />
       <div className="bg-black px-6 pb-16 md:px-12 lg:px-16">
         <TrendingNow />
-        {/* add popular, top rated, upcoming here later */}
+        <Popular/>
+        <TopRated/>
+        <UpComing/>
       </div>
     </div>
   )

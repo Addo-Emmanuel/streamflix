@@ -1,1 +1,17 @@
-{ "myList": [], "ratings": [] }
+{
+  "myList": [
+    {
+      "movieId": 791523,
+      "title": "Wildwood",
+      "posterPath": "/snFM00mpNAfUzUtkdEW0uDEvXA0.jpg",
+      "id": 2
+    }
+  ],
+  "ratings": [
+    {
+      "movieId": 1375441,
+      "value": 1,
+      "id": 1
+    }
+  ]
+}
