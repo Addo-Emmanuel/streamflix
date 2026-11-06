@@ -1,5 +1,4 @@
 import { Play, Plus } from 'lucide-react'
-import Navbar from './Navbar'
 import { Button } from './ui/button'
 import marvelLogo from '../assets/marvelLogo.svg'
 import heroBg from '../assets/backgroundImage.png'
@@ -7,16 +6,12 @@ import heroBg from '../assets/backgroundImage.png'
 const Hero = () => {
   return (
     <section
-      className="relative min-h-screen overflow-hidden bg-cover bg-center"
+      className="relative min-h-[calc(100vh-76px)] overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.7)), url(${heroBg})`,
       }}
     >
-      <div className="relative z-10">
-        <Navbar />
-      </div>
-
-      <div className="relative z-10 flex min-h-[calc(100vh-90px)] items-end px-6 pb-16 pt-8 md:px-12 lg:px-16">
+      <div className="relative z-10 flex min-h-[calc(100vh-76px)] items-end px-6 pb-16 pt-8 md:px-12 lg:px-16">
         <div className="max-w-150 text-white">
           <div className="mb-5 flex items-center gap-3">
             <img src={marvelLogo} alt="Marvel logo" className="h-8 w-auto md:h-10" />

@@ -63,7 +63,8 @@ const Navbar = () => {
           }
         `}
       </style>
-      <nav className="relative flex items-center justify-between bg-transparent px-6 py-4 md:px-16 lg:px-24 xl:px-32">
+      <header className="sticky top-0 z-50 w-full bg-black/80 backdrop-blur-md border-b border-zinc-800/80">
+        <nav className="relative flex items-center justify-between px-6 py-4 md:px-16 lg:px-24 xl:px-32">
         <div className="flex items-center gap-20">
           <Link to="/" className="text-xl font-bold text-white">
             Streamflix
@@ -170,7 +171,8 @@ const Navbar = () => {
             <div className="grid grid-cols-2 gap-1">{genreLinks}</div>
           </div>
         )}
-      </nav>
+        </nav>
+      </header>
     </>
   );
 };
