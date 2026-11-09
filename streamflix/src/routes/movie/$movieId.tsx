@@ -87,7 +87,7 @@ function MovieDetailPage() {
   if (isPending) {
     return (
       <div className="grid gap-10 bg-black px-6 py-10 md:grid-cols-[380px_1fr] md:px-12">
-        <Skeleton className="aspect-[2/3] w-full max-w-[380px]" />
+        <Skeleton className="aspect-2/3 w-full max-w-95" />
         <div className="space-y-4">
           <Skeleton className="h-4 w-48" />
           <Skeleton className="h-9 w-2/3" />
@@ -124,19 +124,19 @@ function MovieDetailPage() {
     <div className="space-y-12 bg-black px-6 py-10 text-white md:px-12">
       <div className="grid gap-10 md:grid-cols-[380px_1fr]">
         {/* Poster with title overlay */}
-        <div className="relative w-full max-w-[380px] self-start overflow-hidden rounded-2xl bg-neutral-900">
+        <div className="relative w-full max-w-95 self-start overflow-hidden rounded-2xl bg-neutral-900">
           {data.poster_path ? (
             <img
               src={`${IMG}/w500${data.poster_path}`}
               alt={data.title}
-              className="aspect-[2/3] w-full object-cover"
+              className="aspect-2/3 w-full object-cover"
             />
           ) : (
-            <div className="flex aspect-[2/3] items-center justify-center text-neutral-400">
+            <div className="flex aspect-2/3 items-center justify-center text-neutral-400">
               No image
             </div>
           )}
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-5 pt-20">
+          <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/90 to-transparent p-5 pt-20">
             <p className="text-xl font-bold">{data.title}</p>
           </div>
         </div>
