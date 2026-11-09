@@ -24,7 +24,7 @@ export default function Popular() {
       {isPending && (
         <div className="flex gap-3">
           {Array.from({ length: 6 }).map((_, i) => (
-            <Skeleton key={i} className="aspect-[2/3] w-40 shrink-0" />
+            <Skeleton key={i} className="aspect-2/3 w-40 shrink-0" />
           ))}
         </div>
       )}
@@ -41,7 +41,7 @@ export default function Popular() {
       )}
 
       {data && (
-        <div className="flex gap-3 overflow-x-auto pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+        <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           {data.results.map((movie) => (
             <Link
               key={movie.id}
@@ -54,10 +54,10 @@ export default function Popular() {
                   <img
                     src={`${IMAGE_BASE}${movie.poster_path}`}
                     alt={movie.title}
-                    className="aspect-[2/3] w-full object-cover"
+                    className="aspect-2/3 w-full object-cover"
                   />
                 ) : (
-                  <div className="flex aspect-[2/3] items-center justify-center bg-neutral-800 text-sm text-neutral-400">
+                  <div className="flex aspect-2/3 items-center justify-center bg-neutral-800 text-sm text-neutral-400">
                     No image
                   </div>
                 )}
@@ -66,7 +66,7 @@ export default function Popular() {
                   {movie.vote_average?.toFixed(1) ?? "N/A"}
                 </Badge>
 
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-2 pt-8">
+                <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/90 to-transparent p-2 pt-8">
                   <p className="line-clamp-2 text-sm font-semibold text-white">
                     {movie.title}
                   </p>
